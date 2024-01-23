@@ -5,6 +5,7 @@ dotenv:
 
 includes:
   constructor:
+<<<<<<< HEAD:Taskfile.yaml
     taskfile: .constructor/Taskfile.yaml
     dir: .constructor
     optional: true
@@ -12,6 +13,15 @@ includes:
   provisioner:
     taskfile: .provisioner/Taskfile.yaml
     dir: .provisioner
+=======
+    taskfile: '.constructor/Taskfile.yml'
+    dir: '.constructor'
+    optional: true
+
+  provisioner:
+    taskfile: ".provisioner/Taskfile.yml"
+    dir: ".provisioner"
+>>>>>>> 30ba70a (Task VARIABLE aren't usable on taskfiles includes. bug ?):Taskfile.yml
     optional: true
 
 tasks:
