@@ -54,6 +54,28 @@ task: Available tasks for this project:
 * provisioner:install:                Prepare JupyterHub instance with Ansible playbooks
 ```
 
+If you need to resynchronize with updated dependencies re-execute the init task.
+
+```bash
+$ task init
+task: Task "git_clone_if_not_exist" is up to date
+task: Task "git_clone_if_not_exist" is up to date
+task: [git_checkout_or_pull] cd '.constructor' &&  git pull 
+task: [git_checkout_or_pull] cd '.provisioner' &&  git pull 
+Déjà à jour.
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 3 (delta 2), reused 3 (delta 2), pack-reused 0
+Dépaquetage des objets: 100% (3/3), 278 octets | 139.00 Kio/s, fait.
+Depuis https://github.com/jupytercloud-project/image_build
+   ae9c8d4..574e2f1  main       -> origin/main
+Mise à jour ae9c8d4..574e2f1
+Fast-forward
+ Taskfile.yml | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+```
+
 Start an image build
 
 ```bash
