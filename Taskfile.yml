@@ -5,13 +5,13 @@ dotenv:
 
 includes:
   constructor:
-    taskfile: '{{.CONSTRUCTOR_REPO_DIR}}/Taskfile.yml'
-    dir: '{{.CONSTRUCTOR_REPO_DIR}}'
+    taskfile: .constructor/Taskfile.yml
+    dir: .constructor
     optional: true
 
   provisioner:
-    taskfile: '{{.PROVISIONER_REPO_DIR}}/Taskfile.yml'
-    dir: '{{.PROVISIONER_REPO_DIR}}'
+    taskfile: .provisioner/Taskfile.yml
+    dir: .provisioner
     optional: true
 
 tasks:

@@ -1,11 +1,14 @@
 # jupytercloud-project / jupyterhub_image
 
+## Usage
 
 ```bash
 $ task
 task: Available tasks for this project:
 * init:       Initializes constructor and provisioner repositories
 ```
+
+You must first clone the dependency repositories
 
 ```bash
 $ task init
@@ -35,6 +38,25 @@ Already up to date.
 Already up to date.
 ```
 
+You now inherit the dependencies tasks
+
 ```bash
+ $ task
+task: Available tasks for this project:
+* init:                               Initializes constructor and provisioner repositories
+* constructor:build:                  Constructor build task
+* constructor:default:                list tasks      (aliases: constructor)
+* constructor:fetch:                  Locally fetch the VM artifact from the build cloud
+* constructor:get_ssh_key_path:       Return temporary ssh key path
+* constructor:init:                   Constructor init task
+* constructor:post-install:           post-install
+* provisioner:configure:              Configure Jupyterhub instance with Ansible playbooks
+* provisioner:install:                Prepare JupyterHub instance with Ansible playbooks
+```
+
+Start an image build
+
+```bash
+$ task constructor:build
 
 ```
