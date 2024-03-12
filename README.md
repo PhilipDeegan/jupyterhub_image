@@ -4,7 +4,7 @@ The purpose of this repository is to build a jupyterhub kvm image usable on an O
 To achieve this goal, it uses the constructor repository [image_build](https://github.com/jupytercloud-project/image_build) hosting Packer code to build an OpenStack image and
 the provisioner repository [jupyterhub_provisioner](https://github.com/jupytercloud-project/jupyterhub_provisioner) hosting Ansible code to provision the image.
 
-The code from the constructor repository communicate with the code from the provisioner one through tasks.
+The code from the constructor repository communicate with the code from the provisioner one through [tasks](https://taskfile.dev/usage/).
 
 ## Usage
 
