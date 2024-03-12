@@ -1,9 +1,3 @@
 dependencies:
   gnu.org/coreutils: '*'
-  github.com/util-linux/util-linux: '*'
   taskfile.dev: '*'
-  #packer.io: '*'
-  #terraform.io: ^1.6
-  #jetporch.com: '*'
-  #openssh.com: '*'
-  #pkgx: '1.0.0'
