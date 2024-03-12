@@ -1,5 +1,9 @@
 # jupytercloud-project / jupyterhub_image
 
+The purpose of this repository is to build a jupyterhub kvm image usable on an OpenStack cloud.
+To achieve this goal, it uses the repository [image_build](https://github.com/jupytercloud-project/image_build) hosting Packer code to build an OpenStack image and
+a repository [jupyterhub_provisioner](https://github.com/jupytercloud-project/jupyterhub_provisioner) hosting Ansible code to provision the image.
+
 ## Usage
 
 ```bash
@@ -54,7 +58,7 @@ task: Available tasks for this project:
 * provisioner:install:                Prepare JupyterHub instance with Ansible playbooks
 ```
 
-If you need to resynchronize with updated dependencies re-execute the init task.
+If you need to resynchronize with updated dependencies, re-execute the init task.
 
 ```bash
 $ task init
