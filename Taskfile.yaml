@@ -10,7 +10,7 @@ includes:
     optional: true
 
   provisioner:
-    taskfile: .provisioner/Taskfile.yml
+    taskfile: .provisioner/Taskfile.yaml
     dir: .provisioner
     optional: true
 
