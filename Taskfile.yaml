@@ -9,6 +9,11 @@ includes:
     dir: .constructor
     optional: true
 
+  deployer:
+    taskfile: .deployer/Taskfile.yaml
+    dir: .deployer
+    optional: true
+
   provisioner:
     taskfile: .provisioner/Taskfile.yaml
     dir: .provisioner
@@ -62,6 +67,12 @@ tasks:
         REPO_BRANCH: '{{.CONSTRUCTOR_REPO_BRANCH}}'
         REPO_TAG: '{{.CONSTRUCTOR_REPO_TAG}}'
         REPO_DIR: '{{.CONSTRUCTOR_REPO_DIR}}'
+    - task: git_checkout_or_pull
+      vars:
+        REPO_URL: '{{.DEPLOYER_REPO_URL}}'
+        REPO_BRANCH: '{{.DEPLOYER_REPO_BRANCH}}'
+        REPO_TAG: '{{.DEPLOYER_REPO_TAG}}'
+        REPO_DIR: '{{.DEPLOYER_REPO_DIR}}'
     - task: git_checkout_or_pull
       vars:
         REPO_URL: '{{.PROVISIONER_REPO_URL}}'
