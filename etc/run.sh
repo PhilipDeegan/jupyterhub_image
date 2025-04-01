@@ -5,7 +5,7 @@ CWD="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 if_install(){
   set -exu
-  $1 $2 || ($SUDO pkgx install $1 && $1 $2)
+  $1 $2 || eval "$(pkgx +${1})"
 }
 
 (
